@@ -1,5 +1,6 @@
 <?php
 include('conn.php');
+if(isset($_POST) && !empty($_POST)):
 $rt=0;
 $id=$_POST['id'];
 $client_name=$_POST['c_name'];
@@ -12,7 +13,7 @@ $amount=$_POST['amount'];
 $qry="insert into bill_tab(client_name,client_type,date,transaction_loss,currency,amount,bill_amount)values('$client_name','$cl_type','$date','$trans','$currency','$amount','$rt')";
 mysqli_query($con,$qry)or die('error'.mysqli_error($con));
 
-
+endif;
 ?>
 
 <html>
