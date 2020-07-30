@@ -47,8 +47,56 @@
                     <input type="date" class="form-control" id="date" name="date"/>
                     </div>
                 </div>
-                     </div>
+                           <div class="row">
+                        <div class="col-sm-4">
+                <label>Currency Type</label>
+                <select class="form-control" id="ctype" name="ctype">
+                    <option value="">Select</option>
+                    <option value="CAD">CAD</option>
+                    <option value="INR">INR</option>
+                </select>
+            </div>
+                        <div class="col-sm-4">
+                            <label>Transaction Loss(in %)</label>
+                            <input type="text" class="form-control" placeholder="percentage" id="t_loss" name="t_loss"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Amount</label>
+                            <input type="number" class="form-control"  placeholder="enter amount" id="amount" name="amount"/>
+                        </div>
+               </div>
+                
+                </div>
+                     <div class="row">
+                   <div class="col-sm-12 text-center" style="margin-top: 25px;">
+                       
+                       <input type="hidden" id="id" name="id"/>
+                       <input type="reset" name="bt" class="btn btn-danger" value="Cancel"/>
+                       <input type="submit" name="submit" class="btn btn-success" value="Generate Bill" />
+                       
+                       
+                </div>
+                </div>
+                  
                 </form>
+                <div class="col-sm-12 container" id="final">
+                <div class="row">
+                    
+                 <div class="col-sm-4 float-right">
+                 <label>Amount to be Billed</label>
+                 <input type="text" class="form-control" value=""/>
+                 
+                 </div>
+                  </div>
+                     
+                     <div class="row " style="margin-top: 50px;">
+                         <div class="col-sm-4">
+                             <span><a href="" style="text-decoration: none" class="btn btn-danger">Print</a></span>
+                         </div></div>
+                    
+                
+                    
+                 </div>
             </section>
             </div>
         
