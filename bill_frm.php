@@ -1,6 +1,6 @@
 <?php
 include('conn.php');
-
+$rt=0;
 $id=$_POST['id'];
 $client_name=$_POST['c_name'];
 $cl_type=$_POST['client_type'];
