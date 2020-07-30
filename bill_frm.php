@@ -115,10 +115,14 @@ endif;
                  
                  </div>
                   </div>
-                     
+                     <?php
+                     $qry="select * from bill_tab order by id desc";
+                     $result=mysqli_query($con,$qry)or die('error'.mysqli_error($con));
+                     $row= mysqli_fetch_array($result);
+                     ?>
                      <div class="row " style="margin-top: 50px;">
                          <div class="col-sm-4">
-                             <span><a href="" style="text-decoration: none" class="btn btn-danger">Print</a></span>
+                             <span><a href="print.php?id=<?php echo $row['id']?>" style="text-decoration: none" class="btn btn-danger">Print</a></span>
                          </div></div>
                     
                 
