@@ -12,16 +12,16 @@ $row=mysqli_fetch_array($result);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bill Print</title>
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/print_save/app.min.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css">
+ <script src="js/print_save/app.min.js"></script>
     <body onload="window.print()">
         <div class="wrapper">
             <section class="invoice">
                 <div class="container" style="margin-top: 50px;">
-                    <div class="col-sm-12 bg-dark">
-                        <img src="img/SAVE_20200730_093517.jpg"/>
+                    <div class="col-sm-12 bg-info">
+                        <h2>Bill Receipt</h2>
                     </div>
-                    <div class="col-sm-8 text-center">
+                    <div class="col-sm-12 text-center">
                  <table class="table table-striped table-bordered" style="font-size: 14px; margin-top: 50px;">    
                                             
                                                 <tr >
