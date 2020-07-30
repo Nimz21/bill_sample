@@ -8,7 +8,18 @@ $cl_type=$_POST['client_type'];
 $date=$_POST['date'];
 $currency=$_POST['ctype'];
 $trans=$_POST['t_loss'];
+$q= ($trans/100);
 $amount=$_POST['amount'];
+if($currency=='CAD')
+{
+   
+   $e=$q*$amount;
+   $rt=($amount*0.018)+$e;
+}
+ else if($currency=='INR'){
+    $e=$q*$amount;
+    $rt=$amount+$e;
+ }
 
 $qry="insert into bill_tab(client_name,client_type,date,transaction_loss,currency,amount,bill_amount)values('$client_name','$cl_type','$date','$trans','$currency','$amount','$rt')";
 mysqli_query($con,$qry)or die('error'.mysqli_error($con));
@@ -100,7 +111,7 @@ endif;
                     
                  <div class="col-sm-4 float-right">
                  <label>Amount to be Billed</label>
-                 <input type="text" class="form-control" value=""/>
+                 <input type="text" class="form-control" value="<?php echo $rt ?>"/>
                  
                  </div>
                   </div>
